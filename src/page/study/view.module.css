@@ -1,0 +1,18 @@
+.show{
+    max-width: 850px;
+    word-wrap: break-word;
+    font-size: larger;
+    word-spacing: 10px;
+    margin-bottom: 20%;
+    opacity: 1;
+}
+.show * {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+.show code {
+    font-size: larger;
+}
+
+.show a {
+    color: aliceblue;
+}

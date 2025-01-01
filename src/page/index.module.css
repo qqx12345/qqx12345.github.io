@@ -1,0 +1,143 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    flex-direction: row;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    bottom: 10%;
+}
+
+.element {
+    aspect-ratio: 16 / 9;;
+    vertical-align: top;
+    font-size: 1.5vw;
+    width: 14em;
+    background: hsl(210, 23%, 8%);
+    color: white;
+    background-size: cover;
+    background-position: center;
+    white-space: normal;
+    word-break: break-word;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+    padding: 3px 10px;
+}
+
+.element .number {
+    position: absolute;
+    top: 1em;
+    filter: drop-shadow(0 2px 1px hsla(0, 0%, 0%, 0.5));
+}
+
+.element .number:before,
+.element .number:after {
+  display: inline-block;
+  content: '';
+  height: 0.1em;
+  margin-top: -0.1.5em;
+  background: hsl(0, 0%, 100%);
+}
+
+.element .number:before {
+    width: 0;
+    margin-left: 0;
+}
+
+.element .number::after {
+    width: 3em;
+    margin-left: 0.7em;
+}
+
+.element .body {
+    position: absolute;
+    bottom: 1.5em;
+  }
+
+.element:before,
+.element .number:before,
+.element .number:after,
+.element .headline,
+.element .link {
+  transition: 375ms ease;
+}
+
+.headline {
+    font-size: 1.5em;
+    font-weight: 600;
+    transition-delay: 50ms;
+    position: relative;
+    bottom: 0.5em;
+    cursor: default;
+    filter: drop-shadow(0 1.5px 1px hsla(0, 0%, 0%, 0.5));
+}
+.title {
+    margin-top: 20%;
+}
+.link {
+    display: inline-block;
+    background: hsl(204, 90%, 50%);
+    border-radius: 4px;
+    padding: 0 0.5em;
+    font-size: 1.2em;
+    opacity: 0;
+    position: absolute;
+    bottom: -2em;
+    pointer-events: none;
+    transition-delay: 25ms;
+  }
+
+  .element:hover .number:before {
+    width: 3em;
+    margin-right: 1em;
+    transition-delay: 100ms;
+  }
+  .element:hover .number::after {
+    width: 0em;
+    margin-left: 0;
+    transition-delay: 100ms;
+  }
+  .element:hover .link {
+    bottom: 0;
+    opacity: 1;
+    transition-delay: 250ms;
+    pointer-events: auto;
+   }
+   .element:hover .headline {
+    transition-delay: 100ms;
+    bottom: 1.5em;
+  }
+  .start {
+    transition: all 500ms ease 200ms;
+    position: relative;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px 30px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .start:hover {
+    transform: scale(1.1);
+  }
+  .end{
+    display: none;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+  }
+  .lnk{
+    color: #fff;
+    text-decoration: none;
+  }
